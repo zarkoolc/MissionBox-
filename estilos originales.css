@@ -1,0 +1,1156 @@
+html, body {
+    background-color: #ffffff;
+    font-family: "Varela Round",Verdana,sans-serif;
+    font-size: 16px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+.izq {
+    text-align: left;
+}
+.der {
+    text-align: right;
+}
+.titulo {
+    font-size: 21px;
+    margin-top: 5px;
+}
+.error {
+    color: red;
+    margin-top: 10px;
+}
+select, input[type="text"], input[type="password"] {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: "Varela Round",Verdana,sans-serif;
+    font-size: 16px;
+    padding: 5px;
+    width: 300px;
+}
+#mensajes {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 3px;
+    color: #000000;
+    padding: 20px;
+    position: fixed;
+    right: 5px;
+    text-align: center;
+    top: 5px;
+    width: 150px;
+    z-index: 102;
+}
+.boton {
+    background-color: #5db6c5;
+    border: 8px solid #5db6c5;
+    border-radius: 3px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    margin: 3px 16px 3px 3px;
+}
+.boton.enviarForm {
+    display: table;
+    margin-top: 10px;
+}
+.cabecera .boton:hover {
+    box-shadow: 3px 3px 10px 0 rgba(255, 255, 255, 0.7);
+}
+.cuerpo .boton:hover {
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.7);
+}
+.selector {
+    background: #000000 none repeat scroll 0 0;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 8px 2px;
+}
+.selector:hover {
+    box-shadow: 0 -3px 10px 0 rgba(255, 255, 255, 0.7);
+}
+.selectorI {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #ffffff;
+    color: #000000;
+    display: inline-block;
+    padding: 8px 8px 2px;
+}
+.situacion {
+    border-bottom: 1px solid #000000;
+    font-size: 21px;
+    margin: 5px 0;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+.situacion a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.listado .orden {
+    margin: 5px 20px 0 0;
+    position: initial;
+    text-align: right;
+}
+.orden .boton {
+    padding-right: 20px;
+}
+.orden .relevancia, .orden .precioDesc {
+    background: #5db6c5 url("/TV/58/3/img/flecha_abajo.png/15-15-FFFFFF") no-repeat scroll right center;
+}
+.orden .precioAsc {
+    background: #5db6c5 url("/TV/58/3/img/flecha_arriba.png/15-15-FFFFFF") no-repeat scroll right center;
+}
+.menuVertical {
+    display: inline-block;
+    margin: 5px 10px 0 0;
+    vertical-align: top;
+    width: 300px;
+}
+.menuVertical .entrada {
+    border-bottom: 1px solid #000000;
+    color: #000000;
+    padding: 10px;
+}
+.menuVertical .entrada.hija {
+    margin-left: 20px;
+}
+.menuVertical .entrada.activo {
+    background-color: #000000;
+    border-bottom: 1px solid #000000;
+    color: #ffffff;
+    padding: 10px;
+}
+.menuVertical .entrada:hover {
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.7);
+}
+.menuVertical a {
+    text-decoration: none;
+}
+.restoMenu {
+    display: inline-block;
+    width: calc(100% - 310px);
+}
+.barraFamilias {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 79;
+}
+.barraFamilias:hover {
+    overflow: visible;
+}
+.barraFamilias .zonaH {
+    display: inline-block;
+    vertical-align: top;
+    width: 45px;
+}
+.barraFamilias .zonaF {
+    background-color: #ffffff;
+    display: inline-block;
+    margin-left: 5%;
+    text-align: center;
+    width: calc(100% - 205px);
+}
+.barraFamilias .menuFlotante {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+.barraFamilias .menuFlotante .lista {
+    background-color: #ffffff;
+    color: #000000;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.25s ease 0.1s;
+    z-index: 80;
+}
+.barraFamilias .menuFlotante .lista .hr {
+    height: 0;
+    margin-top: 0;
+}
+.barraFamilias .menuFlotante .lista a .entrada {
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    text-decoration: none;
+    width: 300px;
+}
+.barraFamilias .menuFlotante .lista a .entrada:hover {
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.7);
+}
+.barraFamilias .menuFlotante .lista a {
+    color: #000000;
+    text-decoration: none;
+}
+.barraFamilias .menuFlotante:hover > .lista {
+    border: 1px solid #000000;
+    opacity: 1;
+}
+.barraFamilias .menuFlotante:hover > .lista .hr {
+    height: 1px;
+    margin-top: 5px;
+}
+.barraFamilias .menuFlotante:hover > .lista .entrada {
+    border-bottom: 1px solid #000000;
+    height: auto;
+    overflow: visible;
+    padding: 10px;
+}
+.barraFamilias #bHamburguesa {
+    background: #5db6c5 url("/TV/58/3/img/hamburguesa.png/20-20-FFFFFF") no-repeat scroll left center;
+    height: calc(1em + 2px);
+    width: 20px;
+}
+.fam.n0 {
+    font-size: 21px;
+    margin-left: 0;
+    margin-top: 8px;
+}
+.fam.n1 {
+    font-size: 19px;
+    margin-left: 15px;
+    margin-top: 4px;
+}
+.fam.n2 {
+    font-size: 17px;
+    margin-left: 30px;
+    margin-top: 2px;
+}
+.fam.n3 {
+    font-size: 15px;
+    margin-left: 45px;
+    margin-top: 1px;
+}
+.fam.n4 {
+    font-size: 13px;
+    margin-left: 60px;
+    margin-top: 0;
+}
+.fam.n5 {
+    font-size: 11px;
+    margin-left: 75px;
+    margin-top: 0;
+}
+.cuerpo .articulo {
+    margin-top: 10px;
+    position: relative;
+}
+.cuerpo .articulo .caja.izq {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: top;
+    width: calc(100% - 650px);
+}
+.cuerpo .articulo .caja.der {
+    display: inline-block;
+    width: 640px;
+}
+.cuerpo .articulo .caja .visorImagen .selectorImagen {
+    margin-top: 4px;
+    text-align: left;
+    width: 100%;
+}
+.cuerpo .articulo .caja .imagen {
+    background-color: #ffffff;
+    display: none;
+    height: 480px;
+    width: 640px;
+}
+.cuerpo .articulo .caja .imagen img {
+    font-family: "object-fit: contain;";
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+.cuerpo .articulo .caja .miniatura {
+    background-color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(25% - 4px);
+}
+.cuerpo .articulo .caja .miniatura img {
+    font-family: "object-fit: contain;";
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+.cuerpo .articulo .caja .descripcion {
+    font-size: 21px;
+}
+.cuerpo .articulo .caja .precio {
+    font-size: 21px;
+}
+.cuerpo .articulo .caja .titDecDet {
+    font-size: 21px;
+    margin-top: 20px;
+}
+.cuerpo .articulo .caja .consultanos {
+    margin-top: 10px;
+}
+.cuerpo .articulo .caja .consultanos .boton {
+    display: block;
+    margin-top: 0;
+}
+.cuerpo .articulo .social {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    z-index: 5;
+}
+.cuerpo .articulo .caja form {
+    display: inline-block;
+}
+.carrito {
+    display: inline-block;
+    width: calc(100% - 400px);
+}
+.carrito .articulo {
+}
+.carrito .articulo .imagen {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    display: inline-block;
+    height: 150px;
+    width: 200px;
+}
+.carrito .articulo .imagen img {
+    border-radius: 3px;
+    font-family: "object-fit: contain;";
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+.carrito .articulo .caja {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: top;
+    width: calc(100% - 215px);
+}
+.carrito .articulo .caja2 {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    width: 50%;
+}
+.carrito .articulo .caja .caja2 .descripcion {
+    font-size: 21px;
+    font-weight: bold;
+}
+.carrito .articulo .caja .caja2 .precio {
+    font-size: 16px;
+    font-weight: bold;
+}
+.carrito .articulo .caja .caja2 .leyenda {
+    font-weight: bold;
+    padding-top: 5px;
+}
+.carrito .articulo .caja .caja2 .boton.eliminar {
+    background: #5db6c5 url("/TV/58/3/img/papelera.png/26-26-FFFFFF") no-repeat scroll left center;
+    padding-left: 34px;
+}
+.carrito .articulo .caja .caja2 .cantidad .boton {
+    background: #5db6c5 url("/TV/58/3/img/recargar.png/26-26-FFFFFF") no-repeat scroll left center;
+    padding-left: 34px;
+}
+.carrito .articulo .caja .caja2 #iCantidad {
+    width: 80px;
+}
+.carrito .articulo .caja .caja2 #iImporte {
+    background-color: #ffffff;
+    border: 1px solid darkgray;
+    box-shadow: 1px 1px 1px 0 lightgray inset;
+    color: #000000;
+    padding: 5px;
+    text-align: right;
+    width: 120px;
+}
+.pedir {
+    display: inline-block;
+    padding: 5px;
+    vertical-align: top;
+    width: 390px;
+}
+.pedir .logo {
+    height: 80px;
+    width: 390px;
+}
+.pedir .logo img {
+    font-family: "object-fit: contain;";
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+.pedir .gracias {
+    border-bottom: 1px solid #000000;
+    font-weight: bold;
+    padding-bottom: 5px;
+    width: 100%;
+}
+.pedir .direccion {
+    border-bottom: 1px solid #000000;
+    padding: 5px 0;
+    width: 100%;
+}
+.pedir .formaPago {
+    border-bottom: 1px solid #000000;
+    padding: 5px 0;
+    width: 100%;
+}
+.pedir .tipoEnvio {
+    border-bottom: 1px solid #000000;
+    padding: 5px 0;
+    width: 100%;
+}
+.pedir .info {
+    border-bottom: 1px solid #000000;
+    padding: 5px 0;
+    width: 100%;
+}
+.pedir .leyenda {
+    font-weight: bold;
+    padding-top: 5px;
+}
+.pedir .boton {
+    margin-top: 15px;
+}
+.pedir .boton.tramitar {
+    margin: 5px 0 0;
+    text-align: center;
+    width: 375px;
+}
+.pedir .campo {
+    background-color: #ffffff;
+    border: 1px solid darkgray;
+    box-shadow: 1px 1px 1px 0 lightgray inset;
+    color: #000000;
+    font-size: 21px;
+    padding: 5px;
+    text-align: right;
+    width: 378px;
+}
+.listado {
+    margin: 0 auto 5px;
+    text-align: center;
+    width: 100%;
+}
+.listado .articulo {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    height: 222px;
+    margin: 5px;
+    position: relative;
+    width: 282px;
+}
+.listado .articulo .imagen {
+    background-color: #ffffff;
+    border-radius: 3px;
+    height: 220px;
+    left: 0;
+    padding: 1px;
+    position: absolute;
+    top: 0;
+    width: 280px;
+    z-index: 1;
+}
+.listado .articulo .imagen img {
+    background-color: #ffffff;
+    border-radius: 3px;
+    font-family: "object-fit: contain;";
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+.listado .articulo .precio {
+    background-color: #000000;
+    border-radius: 3px;
+    bottom: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    left: 10px;
+    padding: 8px;
+    position: absolute;
+    z-index: 2;
+}
+.listado .articulo .descripcion {
+    color: #000000;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: absolute;
+    text-align: left;
+    top: 110px;
+    z-index: 0;
+}
+.listado .articulo .botones {
+}
+.listado .articulo .botones .boton {
+    bottom: 10px;
+    position: absolute;
+    right: 10px;
+    z-index: 0;
+}
+.listado .articulo .oferta {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    z-index: 2;
+}
+.listado .articulo .recomendado {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px;
+    position: absolute;
+    right: 0;
+    top: 47px;
+    z-index: 2;
+}
+.listado .familia {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    display: inline-block;
+    height: 212px;
+    margin: 5px;
+    position: relative;
+    width: 282px;
+}
+.listado .familia .imagen {
+    background-color: #ffffff;
+    border-radius: 3px;
+    height: 210px;
+    left: 0;
+    padding: 1px;
+    position: absolute;
+    top: 0;
+    width: 280px;
+    z-index: 1;
+}
+.listado .familia .imagen img {
+    background-color: #ffffff;
+    border-radius: 3px;
+    font-family: "object-fit: contain;";
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+.listado .familia .descripcion {
+    background-color: #000000;
+    box-shadow: 0 13px 36px -5px rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 0;
+    margin-top: 158px;
+    opacity: 0.6;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    position: absolute;
+    width: 282px;
+    z-index: 2;
+}
+.escaparate {
+    height: 360px;
+    margin: 0 auto 5px;
+    position: relative;
+    width: 100%;
+}
+.escaparate .botonAtras {
+    background: #000000 url("/TV/58/3/img/anterior.png/15-15-FFFFFF") no-repeat scroll center center;
+    border-radius: 12px;
+    cursor: pointer;
+    height: 25px;
+    left: 2px;
+    position: absolute;
+    top: 168px;
+    width: 25px;
+    z-index: 4;
+}
+.escaparate .botonAtras:hover {
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.7);
+}
+.escaparate .botonAlante {
+    background: #000000 url("/TV/58/3/img/siguiente.png/15-15-FFFFFF") no-repeat scroll center center;
+    border-radius: 12px;
+    cursor: pointer;
+    height: 25px;
+    position: absolute;
+    right: 2px;
+    top: 168px;
+    width: 25px;
+    z-index: 4;
+}
+.escaparate .botonAlante:hover {
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.7);
+}
+.escaparate .opciones {
+    bottom: 2px;
+    margin-left: 25px;
+    position: absolute;
+    text-align: center;
+    width: calc(100% - 50px);
+    z-index: 4;
+}
+.escaparate .opciones .opcion {
+    border: 2px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    height: 8px;
+    margin: 2px;
+    width: 8px;
+}
+.escaparate .opciones .opcion:hover {
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.7);
+}
+.escaparate .opciones .activo {
+    background-color: #000000;
+    cursor: initial;
+}
+.escaparate .opciones .activo:hover {
+    box-shadow: initial;
+}
+.escaparate .anuncio {
+    height: 360px;
+    margin-left: 25px;
+    position: absolute;
+    width: calc(100% - 50px);
+    z-index: 1;
+}
+.escaparate .anuncio .caja {
+    position: absolute;
+    vertical-align: top;
+}
+.escaparate .anuncio .caja.cen {
+    height: 360px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+}
+.escaparate .anuncio .caja.izq {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.7);
+    left: 80px;
+    z-index: 2;
+}
+.escaparate .anuncio .caja.der {
+    height: 360px;
+    right: 80px;
+    z-index: 1;
+}
+.escaparate .anuncio .titulo {
+    font-size: 21px;
+    font-weight: bold;
+    margin: 30px 10px 10px 20px;
+}
+.escaparate .anuncio .texto {
+    font-size: 16px;
+    margin: 10px 10px 10px 20px;
+}
+.escaparate .anuncio .boton {
+    margin: 10px 0 10px 40px;
+    padding: 0 20px;
+    text-align: left;
+}
+.escaparate .anuncio img {
+    font-family: "object-fit: contain;";
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+.fondoCabecera {
+    background: #7ad1e4 none repeat scroll 0 0;
+    color: #ffffff;
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+}
+.cabecera {
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 2px;
+    position: relative;
+}
+.cabecera a .nombre {
+    color: #ffffff;
+    display: inline-block;
+    font-size: 15px;
+    text-decoration: none;
+    width: 50%;
+}
+.cabecera .leyenda2 {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: right;
+    width: 50%;
+}
+.cabecera .hr {
+    background-color: #ffffff;
+    height: 1px;
+    margin-top: 5px;
+    width: 100%;
+}
+.cabecera .logo1 {
+    display: inline-block;
+    width: calc(25% - 100px);
+}
+.cabecera .logo2 {
+    display: inline-block;
+    padding-right: 10px;
+    text-align: center;
+    width: calc(75% - 110px);
+}
+.cabecera .botones {
+    display: inline-block;
+    text-align: right;
+    vertical-align: top;
+    width: 200px;
+}
+.cabecera #bUsuario {
+    background: #5db6c5 url("/TV/58/3/img/persona.png/26-26-FFFFFF") no-repeat scroll left center;
+    padding-left: 34px;
+}
+.cabecera #bCarrito {
+    background: #5db6c5 url("/TV/58/3/img/compras.png/26-26-FFFFFF") no-repeat scroll left center;
+    padding-left: 34px;
+}
+.cabecera .busqueda {
+    background: rgba(0, 0, 0, 0) url("/TV/58/3/img/buscar.png/26-26-FFFFFF") no-repeat scroll left center;
+    margin-top: 3px;
+    padding-left: 34px;
+    padding-right: 15px;
+}
+.cabecera .busqueda input {
+    width: 100%;
+}
+.cabecera .leyenda1 {
+    background-color: #ffffff;
+    border-radius: 3px;
+    color: #7ad1e4;
+    font-size: 21px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.cabeceraMovil {
+    display: none;
+    z-index: 53;
+}
+.cabeceraMovil .nombre {
+    font-size: 21px;
+    left: 105px;
+    margin-left: 10px;
+    margin-top: 10px;
+    position: absolute;
+    vertical-align: top;
+}
+.cabeceraMovil .nombre a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.cabeceraMovil .imagen {
+    height: 106px;
+    left: 115px;
+    position: absolute;
+    top: 4px;
+}
+.cabeceraMovil .imagen a img {
+    font-family: "object-fit: contain;";
+    height: 100%;
+    object-fit: contain;
+    object-position: 0 0;
+    z-index: 53;
+}
+.cabeceraMovil .botones {
+    pointer-events: none;
+    position: relative;
+    text-align: right;
+    width: 100%;
+    z-index: 54;
+}
+.cabeceraMovil .botones .boton {
+    display: inline-block;
+    height: 90px;
+    pointer-events: initial;
+    width: 90px;
+}
+.cabeceraMovil .botones #bUsuario {
+    background: #5db6c5 url("/TV/58/3/img/persona.png/90-90-FFFFFF") no-repeat scroll left center;
+}
+.cabeceraMovil .botones #bCarrito {
+    background: #5db6c5 url("/TV/58/3/img/compras.png/90-90-FFFFFF") no-repeat scroll left center;
+}
+.cabeceraMovil .botones #bBuscar {
+    background: #5db6c5 url("/TV/58/3/img/buscar.png/90-90-FFFFFF") no-repeat scroll left center;
+}
+.cabeceraMovil #bHamburguesa {
+    background: #5db6c5 url("/TV/58/3/img/hamburguesa.png/90-90-FFFFFF") no-repeat scroll left center;
+    height: 90px;
+    left: 1px;
+    pointer-events: initial;
+    position: absolute;
+    top: 1px;
+    width: 90px;
+    z-index: 54;
+}
+.cabeceraMovil .busqueda {
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 80px;
+    z-index: 55;
+}
+.menuHamburguesa {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.menuHamburguesa .lista {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    color: #000000;
+    display: none;
+    position: absolute;
+    transition: opacity 0.25s ease 0.1s;
+    z-index: 52;
+}
+.menuHamburguesa .lista a .entrada {
+    border-bottom: 1px solid #000000;
+    padding: 10px;
+    text-decoration: none;
+    width: 300px;
+}
+.menuHamburguesa .lista a .entrada:hover {
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.7);
+}
+.menuHamburguesa .lista a {
+    color: #000000;
+    text-decoration: none;
+}
+.fondoCuerpo {
+    background: #ffffff none repeat scroll 0 0;
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+}
+.cuerpo {
+    color: #000000;
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+    position: relative;
+    width: calc(100% - 30px);
+}
+.cuerpo .hr {
+    background-color: #000000;
+    height: 1px;
+    margin-top: 5px;
+    width: 100%;
+}
+.cuerpo a {
+    color: #000000;
+    text-decoration: none;
+}
+.fondopie {
+    background-color: #5db7c6;
+    color: #ffffff;
+    margin-top: 10px;
+}
+.pie {
+    padding: 10px 80px;
+    width: calc(100% - 160px);
+}
+.pie .seccion {
+    display: inline-block;
+    margin-top: 10px;
+    vertical-align: top;
+    width: 25%;
+}
+.pie .seccion a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+.pie .copy {
+    border-top: 1px solid #ffffff;
+    margin: 10px 80px;
+    padding: 5px;
+    text-align: center;
+    width: calc(100% - 160px);
+}
+.pie .boton {
+    border: 0 none;
+    border-radius: 0;
+    height: 40px;
+    margin: 5px;
+    width: 40px;
+}
+.pie .boton:hover {
+    box-shadow: 3px 3px 10px 0 rgba(255, 255, 255, 0.7);
+}
+.pie .boton img {
+    font-family: "object-fit: contain;";
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+.pagina iframe {
+    height: 600px;
+    width: 100%;
+}
+.publicacion img {
+    margin-right: 10px;
+}
+.contacto {
+    margin: auto;
+    width: 480px;
+}
+.contacto input {
+    width: 100%;
+}
+.contacto textarea {
+    height: 200px;
+    width: 100%;
+}
+.contacto .boton {
+    text-align: center;
+    width: 100%;
+}
+.contacto .logo {
+    height: 100px;
+    margin-top: 10px;
+    width: 100%;
+}
+.contacto .logo img {
+    font-family: "object-fit: contain;";
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+.contacto .info a {
+    font-weight: bold;
+}
+.pedidos {
+    width: 100%;
+}
+.pedidos .codigo {
+    text-align: center;
+}
+.pedidos .fecha {
+    text-align: center;
+}
+.pedidos .total {
+    text-align: right;
+}
+.pedidos .situ {
+    text-align: center;
+}
+.pedido {
+    width: 100%;
+}
+.pedido .imagen {
+    width: 400px;
+}
+.pedido .imagen img {
+    font-family: "object-fit: contain;";
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+.pedido .articulo {
+    text-align: left;
+}
+.pedido .cantidad {
+    text-align: right;
+}
+.pedido .precio {
+    text-align: right;
+}
+.pestana {
+    border: 1px solid #000000;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+.pestana .botones {
+    background: #000000 none repeat scroll 0 0;
+    border-radius: 3px;
+    padding: 8px 8px 0;
+}
+#mascara {
+    background-color: #000000;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0.8;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 101;
+}
+#mascaraMovil {
+    background-color: #000000;
+    display: none;
+    height: calc(100% - 115px);
+    left: 0;
+    opacity: 0.8;
+    position: fixed;
+    top: 115px;
+    width: 100%;
+    z-index: 51;
+}
+#loginUsuario, #recuperarClave, #introEnvio, #introPago, #introObservaciones, #introSinLogin, #introSoloEmail {
+    background-color: #ffffff;
+    border-radius: 3px;
+    color: #000000;
+    display: none;
+    padding: 10px 100px 20px 30px;
+    position: fixed;
+    z-index: 102;
+}
+#loginUsuario .boton:hover, #recuperarClave .boton:hover, #introEnvio .boton:hover, #introPago .boton:hover, #introObservaciones .boton:hover, #introSinLogin .boton:hover, #introSoloEmail.boton:hover {
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.7);
+}
+#loginUsuario .titulo, #recuperarClave .titulo, #introEnvio .titulo, #introPago .titulo, #introObservaciones .titulo, #introSinLogin .titulo, #introSoloEmail .titulo {
+    padding-right: 30px;
+}
+#bCerrar {
+    background: #5db6c5 url("/TV/58/3/img/cerrar.png/20-20-FFFFFF") no-repeat scroll left center;
+    height: 20px;
+    position: absolute;
+    right: 4px;
+    top: 12px;
+    width: 20px;
+}
+#bCerrar:hover {
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.7);
+}
+.titCampo, .info {
+    margin-top: 8px;
+}
+#loginUsuario .info a {
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+}
+#bCerrarSesion {
+    bottom: 5px;
+    position: absolute;
+    right: 5px;
+}
+#introEnvio .precio {
+    display: inline-block;
+    margin-left: 8px;
+}
+#introEnvio .enviarForm, #introPago .enviarForm {
+    margin-top: 20px;
+}
+#barracookies {
+    background-color: #ffffff;
+    bottom: 0;
+    color: #000000;
+    display: none;
+    left: 0;
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 20;
+}
+#barraAcceso {
+    background-color: #ffffff;
+    bottom: 0;
+    color: #000000;
+    display: none;
+    left: 0;
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 19;
+}
+#barraAcceso #bCerrarAcceso {
+    position: absolute;
+    right: 25px;
+    top: 5px;
+}
+@media only screen and (max-width: 1280px) {
+.cuerpo .articulo .caja.izq {
+    width: calc(50% - 10px);
+}
+.cuerpo .articulo .caja.der {
+    width: 50%;
+}
+.cuerpo .articulo .caja .imagen {
+    width: 100%;
+}
+.escaparate .anuncio .caja.izq {
+    left: 40px;
+}
+.escaparate .anuncio .caja.der {
+    right: 40px;
+}
+}
+@media only screen and (max-width: 990px) {
+.cuerpo .articulo .caja.izq {
+    margin-left: 0;
+    width: 100%;
+}
+.cuerpo .articulo .caja.der {
+    width: 100%;
+}
+.escaparate .anuncio .caja.izq {
+    left: 10px;
+}
+.escaparate .anuncio .caja.der {
+    right: 10px;
+}
+.cabecera {
+    display: none;
+}
+.cabeceraMovil {
+    display: block;
+}
+.fondoCabecera {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 53;
+}
+.fondoCuerpo {
+    margin-top: 115px;
+}
+.menuVertical {
+    display: none;
+}
+.barraFamilias {
+    display: none;
+}
+.restoMenu {
+    display: block;
+    width: 100%;
+}
+.carrito {
+    display: block;
+    width: 100%;
+}
+.pedir {
+    display: block;
+    margin: 0 auto;
+}
+.pie .seccion {
+    width: 50%;
+}
+}
